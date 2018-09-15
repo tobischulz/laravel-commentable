@@ -1,5 +1,5 @@
 {
-    "name": "faustbrian/laravel-commentable",
+    "name": "tobischulz/laravel-commentable",
     "description": "Commentable Polymorphic Eloquent Models for for Laravel 5",
     "keywords": ["laravel", "framework", "Laravel-Commentable", "Laravel Commentable", "Brian Faust", "faustbrian"],
     "license": "MIT",
