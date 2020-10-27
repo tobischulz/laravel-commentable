@@ -106,4 +106,16 @@ trait HasComments
     {
         return $this->comments->count();
     }
+
+    /**
+     * Hooking in delete method to delete all polymorph relationships.
+     *
+     * @return void
+     */
+    protected static function bootHasComments()
+    {
+        self::deleting(function ($model) {
+            $model->comments()->delete();
+        });
+    }
 }
