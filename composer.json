@@ -1,32 +1,37 @@
 {
     "name": "tobischulz/laravel-commentable",
     "description": "Commentable Polymorphic Eloquent Models for for Laravel 5",
-    "keywords": ["laravel", "framework", "Laravel-Commentable", "Laravel Commentable", "Brian Faust", "faustbrian"],
-    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "framework",
+        "Laravel-Commentable",
+        "Laravel Commentable"
+    ],
+    "license": "MPL-2.0",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
-        "php": "^7.1",
-        "illuminate/support": "5.6.* || 5.7.*",
-        "illuminate/database": "5.6.* || 5.7.*",
-        "kalnoy/nestedset": "^4.1"
+        "php": "^7.2",
+        "illuminate/support": "^5.8|^6.0",
+        "illuminate/database": "^5.8|^6.0",
+        "kalnoy/nestedset": "^5.0"
     },
     "require-dev": {
         "graham-campbell/testbench": "^5.0",
         "mockery/mockery": "^1.0",
-        "phpunit/phpunit": "^6.5"
+        "phpunit/phpunit": "^8.2"
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Commentable\\": "src/"
+            "Artisanry\\Commentable\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Commentable\\": "tests"
+            "Artisanry\\Tests\\Commentable\\": "tests"
         }
     },
     "config": {
@@ -39,7 +44,7 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Commentable\\CommentableServiceProvider"
+                "Artisanry\\Commentable\\CommentableServiceProvider"
             ]
         }
     },
