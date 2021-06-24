@@ -21,8 +21,6 @@ trait HasComments
 {
     /**
      * The name of the comments model.
-     *
-     * @return string
      */
     public function commentableModel(): string
     {
@@ -31,8 +29,6 @@ trait HasComments
 
     /**
      * The comments attached to the model.
-     *
-     * @return MorphMany
      */
     public function comments(): MorphMany
     {
@@ -42,10 +38,6 @@ trait HasComments
     /**
      * Create a comment.
      *
-     * @param array      $data
-     * @param Model      $creator
-     * @param Model|null $parent
-     *
      * @return static
      */
     public function comment(array $data, Model $creator, Model $parent = null)
@@ -54,9 +46,9 @@ trait HasComments
 
         $comment = (new $commentableModel())->createComment($this, $data, $creator);
 
-        if (!empty($parent)) {
-            $parent->appendNode($comment);
-        }
+        // if (!empty($parent)) {
+        //     $parent->appendNode($comment);
+        // }
 
         return $comment;
     }
@@ -66,7 +58,6 @@ trait HasComments
      *
      * @param $id
      * @param $data
-     * @param Model|null $parent
      *
      * @return mixed
      */
@@ -76,17 +67,15 @@ trait HasComments
 
         $comment = (new $commentableModel())->updateComment($id, $data);
 
-        if (!empty($parent)) {
-            $parent->appendNode($comment);
-        }
+        // if (!empty($parent)) {
+        //     $parent->appendNode($comment);
+        // }
 
         return $comment;
     }
 
     /**
      * Delete a comment.
-     *
-     * @param int $id
      *
      * @return mixed
      */

@@ -15,12 +15,9 @@ namespace Artisanry\Commentable\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Kalnoy\Nestedset\NodeTrait;
 
 class Comment extends Model
 {
-    use NodeTrait;
-
     /**
      * The attributes that are not mass assignable.
      *
@@ -30,8 +27,6 @@ class Comment extends Model
 
     /**
      * Determine if a comment has child comments.
-     *
-     * @return bool
      */
     public function hasChildren(): bool
     {
@@ -59,27 +54,18 @@ class Comment extends Model
     /**
      * Create a comment and persists it.
      *
-     * @param Model $commentable
-     * @param array $data
-     * @param Model $creator
-     *
      * @return static
      */
     public function createComment(Model $commentable, array $data, Model $creator): self
     {
         return $commentable->comments()->create(array_merge($data, [
-            'creator_id'   => $creator->getAuthIdentifier(),
+            'creator_id' => $creator->getAuthIdentifier(),
             'creator_type' => $creator->getMorphClass(),
         ]));
     }
 
     /**
      * Update a comment by an ID.
-     *
-     * @param int   $id
-     * @param array $data
-     *
-     * @return bool
      */
     public function updateComment(int $id, array $data): bool
     {
@@ -88,10 +74,6 @@ class Comment extends Model
 
     /**
      * Delete a comment by an ID.
-     *
-     * @param int $id
-     *
-     * @return bool
      */
     public function deleteComment(int $id): bool
     {

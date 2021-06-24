@@ -1,23 +1,22 @@
 {
     "name": "tobischulz/laravel-commentable",
-    "description": "Commentable Polymorphic Eloquent Models for for Laravel 5",
+    "description": "Commentable Polymorphic Eloquent Models for for Laravel",
     "keywords": [
         "laravel",
         "framework",
         "Laravel-Commentable",
         "Laravel Commentable"
     ],
-    "license": "MPL-2.0",
+    "license": "MIT",
     "authors": [{
-        "name": "Brian Faust",
-        "email": "hello@basecode.sh",
-        "homepage": "https://basecode.sh"
+        "name": "Tobias Schulz",
+        "email": "tobias@byte.sotware",
+        "homepage": "https://byte.software"
     }],
     "require": {
         "php": "^7.2",
         "illuminate/support": "^5.8|^6.0|^7.0|^8.0",
-        "illuminate/database": "^5.8|^6.0|^7.0|^8.0",
-        "kalnoy/nestedset": "^5.0"
+        "illuminate/database": "^5.8|^6.0|^7.0|^8.0"
     },
     "require-dev": {
         "graham-campbell/testbench": "^5.5",
