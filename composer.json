@@ -8,18 +8,20 @@
         "Laravel Commentable"
     ],
     "license": "MIT",
-    "authors": [{
-        "name": "Tobias Schulz",
-        "email": "tobias@byte.sotware",
-        "homepage": "https://byte.software"
-    }],
+    "authors": [
+        {
+            "name": "Tobias Schulz",
+            "email": "tobias@byte.sotware",
+            "homepage": "https://byte.software"
+        }
+    ],
     "require": {
-        "php": "^7.2|^8.0",
-        "illuminate/support": "^5.8|^6.0|^7.0|^8.0",
-        "illuminate/database": "^5.8|^6.0|^7.0|^8.0"
+        "php": "^8.1",
+        "illuminate/support": "^9.0",
+        "illuminate/database": "^9.0"
     },
     "require-dev": {
-        "graham-campbell/testbench": "^5.5",
+        "orchestra/testbench": "7.x",
         "mockery/mockery": "^1.4",
         "phpunit/phpunit": "^9.0"
     },
